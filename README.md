@@ -18,3 +18,8 @@ The application implements no automatic network requests, analytics, cookie/stor
 A successful workflow must be checked against its exact commit; a hosted URL must be checked separately. No novelty, inventorship, patent, clinical, commercial, or all-chat coverage claim is made. Hashes are integrity checks, not independent validation or legal receipts.
 
 © Haley Bird. All rights reserved. Interface and demonstration code, AI-assisted.
+
+## Verified publication and remaining hosting gate
+The first hosted verification job passed the exact release hashes and all 41 decision-rule tests. The separate deployment attempt could not enable Pages: GitHub returned `Resource not accessible by integration` for site creation. That is a hosting-permission boundary, not a test failure.
+
+Pushes now run verification only. Deployment is an explicit manual workflow input, so a verification success is not represented as a hosted release. To activate hosting, a repository admin must open Settings → Pages → Build and deployment → Source: GitHub Actions. Then run this workflow manually with `deploy` checked. Do not create a broader token or change private repository visibility. Live URL/byte/interaction verification is still required after deployment.

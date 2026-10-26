@@ -3,6 +3,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      deploy:
+        description: 'Deploy after a repository admin enables Pages with GitHub Actions source'
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -22,6 +27,7 @@ jobs:
         with:
           path: site
   deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy }}
     needs: verify
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -33,10 +39,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Configure Pages if the repository policy allows it
+      - name: Check the admin-enabled Pages configuration
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b
         with:
-          enablement: true
+          enablement: false
       - name: Publish reviewed public artifact
         id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e
