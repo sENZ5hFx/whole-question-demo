@@ -1,0 +1,47 @@
+{
+  "release": "whole-question-demo/1.0",
+  "classification": "PUBLIC_SAFE_FICTIONAL_DEMONSTRATION",
+  "prepared_utc": "2026-10-26T19:09:11.507543+00:00",
+  "local_execution": {
+    "node_rule_tests": {
+      "passed": 41,
+      "scope": "three hand-authored cases; all 24 evidence subsets; invalid input; allowlisted export"
+    },
+    "python_tests": {
+      "passed": 19,
+      "scope": "12 export-normalization tests and 7 release-gate tests"
+    },
+    "browser_checks": {
+      "passed": 15,
+      "scope": "local Chromium interactions, export, reset, keyboard reachability, responsive overflow, no HTTP requests or uncaught exceptions"
+    },
+    "ocr_integration": {
+      "status": "PASS",
+      "scope": "one synthetic three-second video; not real private recordings"
+    },
+    "visual_review": {
+      "status": "PASS",
+      "scope": "desktop start, three expanded cases, expanded notes, 390px expanded state; same-agent inspection"
+    },
+    "contrast": {
+      "status": "PASS",
+      "scope": "six explicit normal-text color pairs >=4.5:1; not a full accessibility audit"
+    }
+  },
+  "limitations": [
+    "Same-agent authored tests and interpretation; not independent validation",
+    "No hosted production URL verified",
+    "No scientific, psychological, legal, novelty, or commercial validation",
+    "Private study and proprietary project source not included",
+    "No all-chat coverage claim"
+  ],
+  "sha256": {
+    "README.txt": "1b698b6d45c5631060480b5ac30e543a9f12349624242129acbb746615175d68",
+    "_headers": "5b668c33836a5088e94401513139613009d489dc0c7293ad7ed9a0dbe36432fd",
+    "engine.js": "434eda18f7e34afb74a4f630e92fc4c6e193f98fabf6bb7306fb0cf35945baba",
+    "engine.test.cjs": "18af307d8ec07340884a8e0e67ed3f0f60511465d8a51040472adafdd3fe4416",
+    "index.html": "2cdcdc4eebe23829ddc7d47b6713be4fed23f042622f326e7cb9086c4d8bdf3c",
+    "vercel.json": "151ea5a1d8093052d47a5564ff7149fbf8c90135d1a4f11f5acd9a4e38d5ec4a",
+    "verify.py": "e5bf8913816a71f025e75e275302455a900ae122235b747fe4ed28745ae1a19c"
+  }
+}
